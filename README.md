@@ -1,16 +1,18 @@
-# reddit-no-frills
+# reddit-no-frills-dark+
 
-Very simple, clean reddit theme. I got sick of reddit being ugly and decided to make this!
+Very simple, clean dark reddit theme.
 
-Add code to a usertheme or [install with stylish here](https://userstyles.org/styles/126393/reddit-no-frills).
+Dark version, includes sidebar and multireddit chooser.
+Sidebar shows up on hover (icon in the top right).
 
-Make sure to turn subreddit styles off on reddit (settings > display > allow subreddits to show me custom themes). Or edit the theme to make it only apply to your frontpage.
+Add code to a usertheme or [install with stylish here](https://userstyles.org/styles/133277/reddit-no-frills-dark).
 
-**I've disabled the sidebar completely because I never use it. You can submit a post by going to [reddit.com/submit](http://reddit.com/submit)**
+Make sure to turn subreddit styles off on reddit (settings > display > allow subreddits to show me custom themes). 
+Or edit the theme to make it only apply to your frontpage.
 
 # Screenshots
 
-![frontpage](screenshots/front.jpg)
+![frontpage](front.gif)
 
 
-![post+comment page](screenshots/post+comments.jpg)
+![post+comment page](post.gif)
