@@ -1,3 +1,7 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("reddit.com") {
+
 /*
 	BY: V
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
@@ -5,10 +9,6 @@
 	REDDIT LOGO: https://userstyles.org/styles/118049/reddit-dark-naut-style
 	
 */
-
-@-moz-document domain("reddit.com") {
-	
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 
 body {
     background-color: #1a1a1a !important;
@@ -753,8 +753,7 @@ ul.sr-bar:nth-child(3),
     border: none;
 }
 .side::before {    
-    content: "\f0c9";
-    font-family: FontAwesome;
+    content: "◨";
     color: #aaa;
     text-align: center !important;
     background: transparent!important;
@@ -865,7 +864,7 @@ ul.sr-bar:nth-child(3),
 }
 .hover-bubble.multi-selector {
 	color: #d2d2d2;
-    background: #1a1a1a;
+	background: #1a1a1a;
 	border: none;
 	box-shadow: none;
 	margin-right: -6px;
@@ -1157,5 +1156,4 @@ span.error.RATELIMIT.field-ratelimit {
     -moz-box-shadow: none;
     box-shadow: none;
 }
-
 }
