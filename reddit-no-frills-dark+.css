@@ -5,15 +5,14 @@
 /*
 	BY: V
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
-	WITH PIECES FROM: https://userstyles.org/styles/88599/reddit-stilig-mod
-	REDDIT LOGO: https://userstyles.org/styles/118049/reddit-dark-naut-style
+	WITH PIECES FROM: https://userstyles.org/styles/88599/reddit-stilig-mod	
 	
 */
 
 body {
     background-color: #1a1a1a !important;
     color: #d2d2d2 !important;
-    font-family: arial;	
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";	
 }
 ::-webkit-scrollbar {
     max-width: 10px !important;
@@ -43,7 +42,7 @@ body {
   */
 
 .content {
-    max-width: 1000px !important;
+    max-width: 60% !important;
     margin: 10px auto !important;
     padding: 5px 20px;
 }
@@ -75,27 +74,36 @@ body.with-listing-chooser #header .pagename {
 }
 #header {
     background-color: #1a1a1a;
-    max-width: 1000px !important;
+    max-width: 60% !important;
     margin: 0 auto;
     border-bottom: 4px solid #2b2b2b;
 }
 #header-img.default-header,
 #header-img {
     width: 0;
-    padding-left: 48px;
-    height: 48px;
-    background-image: url(http://i.imgur.com/zMTw5z5.png);
-    background-position: -208px -48px;
+    padding-left: 40px;
+    margin-left: 10px;
+    height: 40px;
+  	background-image: url(https://about.reddit.com/css/images/sprite.png);
+    background-position: 0 0; 
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+	transition: 0.5s filter;
+}
+#header-img.default-header {
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 #header-img.default-header:hover,
 #header-img:hover {
-    background-position: -208px -96px
+    filter: grayscale(35%);
+    -webkit-filter: grayscale(35%);
 }
 #sr-header-area {
     background-color: #1a1a1a;
     height: 22px;
     border-bottom: none;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
 }
 #sr-header-area a {
     color: #999999;
@@ -106,7 +114,6 @@ body.with-listing-chooser #header .pagename {
 #sr-header-area .selected a {
     color: #d2d2d2;
 }
-
 .flat-list li a.gold {
     color: #F7D56F;
 }
@@ -126,8 +133,7 @@ body.with-listing-chooser #header .pagename {
     border-bottom: 4px solid #999;
 }
 #header-bottom-right {
-	background-color: #1a1a1a;
-    padding-top: -30px;
+	background-color: transparent;   
 }
 #header-bottom-right a {
     color: #999 !important;
@@ -239,8 +245,11 @@ input {
     display: none;
 }
 .nsfw-stamp {
-    color: #ED6A5A;
-	border: 0px;
+    color: #000;
+    font-weight: bold;
+    background-color: #632222;
+    border-radius: 0;
+	border: 0px;    
 }
 .md code,
 .md pre {
@@ -254,7 +263,7 @@ input {
 	background-color: #212121;
 }
 .link .entry {
-    padding: 15px 32px 14px 0;    
+    padding: 14px 32px 14px 0;    
     margin-left: 0;
 }
 .link .title {
@@ -269,8 +278,7 @@ ul.flat-list.buttons {
     padding-top: 3px;    
 }
 .link .midcol {
-
-    margin: 15px 14px 0 11px;
+    margin: 15px 14px 0 5px;
     overflow: visible;
     height: 60px;
 }
@@ -289,13 +297,20 @@ a.thumbnail img {
     width: 64px;
 }
 .thumbnail.self,
-.thumbnail.default {
-	-webkit-filter: invert(80%);
-	filter: invert(80%);
+.thumbnail.default,
+.interstitial-image {
+	-webkit-filter: invert(90%) brightness(130%);
+	filter: invert(90%) brightness(130%);
 }
+.thumbnail.nsfw {
+    -webkit-filter: sepia(50%) hue-rotate(130deg) invert(100%) brightness(160%);
+	filter: sepia(50%) hue-rotate(130deg) invert(100%) brightness(160%);
+}
+/* .over18 {
+    background-color: #632222;
+} */
 .arrow {
     margin: 2px 0px 0px 0px;
-    width: 100%;
     height: 14px;
     display: block;
     cursor: pointer;
@@ -305,7 +320,16 @@ a.thumbnail img {
     margin-left: auto;
     margin-right: auto;
     outline: none;
-	filter: brightness(50%);
+	filter: brightness(50%); 
+    transition: 0.5s all;
+}
+.arrow.up:hover {    
+    background-position: -105px -1618px;
+    filter: brightness(80%);
+}
+.arrow.down:hover { 
+	background-position: -63px -1618px;
+    filter: brightness(80%);
 }
 .link.last-clicked {
    border: 0px;    
@@ -333,6 +357,9 @@ a.thumbnail img {
 
 /* SUBREDDIT DROPDOWN & BY DATE DROPDOWN 
   */
+.drop-choices {
+    text-transform: uppercase;
+}
 .drop-choices a.choice:hover {
     background-color: #2b2b2b !important;
 }
@@ -340,6 +367,9 @@ a.thumbnail img {
 .dropdown.srdrop .selected.title {
     color: #999;
     font-size: 10px;
+}
+#sr-header-area .drop-choices.srdrop, .dropdown.srdrop .selected.title:hover {
+    color: #ccc;
 }
 .drop-choices {
     background-color: #1a1a1a;
@@ -451,7 +481,7 @@ a:hover {
 }
 /* COMMENT PAGE 
   */
-button {  
+button, html input[type="button"], input[type="reset"], input[type="submit"] { 
 	color: #9b9b9b;
 	background: #2b2b2b;
 	padding: 5px 20px;
@@ -459,9 +489,9 @@ button {
 	border: none;
 	font-size: 13px;
 }
-button:hover {    	
-	color: #ccc;
-}
+button, html input[type="button"], input[type="reset"], input[type="submit"]:hover {    	
+	color: #ccc;}
+
 .comment .usertext .md {
     color: #cccccc;
 }
@@ -477,6 +507,15 @@ button:hover {
 .new-comment .md :not(pre)>code, .link .md :not(pre)>code, .usertext.border .md :not(pre)>code, .new-comment .md pre, .link .md pre, .usertext.border .md pre .md code{
 	background: #202020;
 	border: 0px;	
+}
+a[href$="/spoiler"] {
+    color: rgba(255,255,255,0)!important;
+    text-shadow: 1px 0 12px #ccc,-1px 0 12px #ccc;
+    transition: 0.5s all;
+}
+a[href$="/spoiler"]:hover {
+    color: rgba(255,255,255,1)!important; 
+    text-shadow: none;
 }
 /* code background */
 .md pre {
@@ -572,9 +611,29 @@ textarea {
     color: #666666;
     border: none;
 }
+.message {
+    background: #202020;
+}
 .message .tagline,
 .message .search-result-meta {
     color: #999999;
+}
+.message.message-reply:not(.threaded) .entry, .message.message-parent:not(.threaded) .entry {
+    border-left: 1px solid #333;
+}
+.message.message-parent>.entry .md, .message.message-reply>.entry .md, .message.message-parent>.entry blockquote, .message.message-reply>.entry blockquote, .message.message-parent>.entry del, .message.message-reply>.entry del {
+    color: #ccc;
+}
+.message.message-reply.recipient>.entry .head, .message.message-parent.recipient>.entry .head {
+    color: #888;    
+}
+.message .subject .correspondent {  
+	color: #9b9b9b;
+	background: #2b2b2b;
+	padding: 5px 20px;
+    line-height: 20px;
+	border: none;
+	font-size: 13px;
 }
 .roundfield {
     background-color: #1a1a1a;
@@ -739,7 +798,7 @@ ul.sr-bar:nth-child(3),
 
 .side {
     background: #1a1a1a !important;
-	color: #d2d2d2;
+	  color: #d2d2d2;
     position: fixed !important;
     padding: 10px 20px 10px 10px !important;
     float: right !important;
@@ -753,7 +812,7 @@ ul.sr-bar:nth-child(3),
     border: none;
 }
 .side::before {    
-    content: "◨";
+    content: "◨";    
     color: #aaa;
     text-align: center !important;
     background: transparent!important;
@@ -864,7 +923,7 @@ ul.sr-bar:nth-child(3),
 }
 .hover-bubble.multi-selector {
 	color: #d2d2d2;
-	background: #1a1a1a;
+    background: #1a1a1a;
 	border: none;
 	box-shadow: none;
 	margin-right: -6px;
@@ -966,6 +1025,10 @@ ul.sr-bar:nth-child(3),
 /* MULTIREDDIT CHOOSER 
 */
 
+
+/* MULTIREDDIT CHOOSER 
+*/
+
 body.with-listing-chooser .listing-chooser {    
     top: 55px;
 	width: 130px;
@@ -978,6 +1041,10 @@ body.with-listing-chooser.listing-chooser-collapsed .contents {
     display: none
 }
 body.with-listing-chooser .listing-chooser .grippy {
+    background: transparent;
+    opacity: 1;
+}
+.grippy:hover {
     background: #1a1a1a;
 }
 body.with-listing-chooser.listing-chooser-collapsed .listing-chooser .grippy:after {
@@ -988,18 +1055,28 @@ body.with-listing-chooser .listing-chooser .grippy {
     box-shadow: none;
 }
 /* bacgkround change on hover collapse/expand area*/
+body.with-listing-chooser .listing-chooser .grippy:before {
+    opacity: 0.8;
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+body.with-listing-chooser .listing-chooser .grippy:hover:before {
+    opacity: 1;
+    -webkit-filter: hue-rotate(170deg) brightness(200%);
+	filter: invert(170deg) brightness(200%);
+}
 body.with-listing-chooser .listing-chooser .grippy:hover {
-    background: #2b2b2b;
+    background: transparent;    
 }
 body.with-listing-chooser .listing-chooser .grippy:hover:after {
-    background: #2b2b2b;
+    background: transparent;
 }
 body.with-listing-chooser .listing-chooser .grippy:after {
     border-right: none;   
     background-position: 131px center;
 }
 body.with-listing-chooser .listing-chooser {
-    background: #1a1a1a;
+    background: transparent;
 }
 
 /* get rid of the padding transition */
@@ -1034,6 +1111,7 @@ body.with-listing-chooser .listing-chooser {
 .listing-chooser li.selected a span {
     color: #939393;
 }
+
 
 /* fix 'create' button in multireddit chooser*/
 .listing-chooser .create button {	
@@ -1155,5 +1233,4 @@ span.error.RATELIMIT.field-ratelimit {
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-}
 }
