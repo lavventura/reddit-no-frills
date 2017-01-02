@@ -1,7 +1,4 @@
 @namespace url(http://www.w3.org/1999/xhtml);
-
-@-moz-document domain("reddit.com") {
-
 /*
 	BY: V
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
@@ -48,10 +45,6 @@ body {
 }
 
 /* HEADER */
-body.with-listing-chooser #header .pagename {
-    position: relative;
-    bottom: 0px;
-}
 .pagename { 
     font-family: monospace;
     font-size: 20px !important;
@@ -91,7 +84,8 @@ body.with-listing-chooser #header .pagename {
 	transition: 0.5s filter;
 }
 #header-img.default-header {
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 2px;
     margin-right: 10px;
 }
 #header-img.default-header:hover,
@@ -101,9 +95,7 @@ body.with-listing-chooser #header .pagename {
 }
 #sr-header-area {
     background-color: #1a1a1a;
-    height: 22px;
     border-bottom: none;
-    margin-bottom: 12px;
 }
 #sr-header-area a {
     color: #999999;
@@ -136,16 +128,58 @@ body.with-listing-chooser #header .pagename {
 	background-color: transparent;   
 }
 #header-bottom-right a {
-    color: #999 !important;
+    color: #999;
 }
 #header-bottom-right a:hover {
-    color: #ccc !important;
+    color: #ccc;
 	text-decoration: none;
 }
 .user .userkarma {
     color: #F99654;
 }
-
+#mail.nohavemail {
+     filter: invert(100%) brightness(150%);
+    -webkit-filter: invert(95%) brightness(130%);
+}
+#mail.havemail {
+    filter: invert(90%) brightness(100%) hue-rotate(190deg);
+    -webkit-filter: invert(90%) brightness(100%) hue-rotate(190deg);
+}
+.message-count {
+    background-color: transparent;    
+}
+a.message-count:before  {
+    content: "(";
+    color: gray!important;
+}  
+a.message-count  {
+    font-size: 10px;
+    color: #F99654!important;
+}
+a.message-count:after  {
+    content: ")";
+    color: gray!important;
+} 
+#modmail.nohavemail {
+    filter: grayscale(100%) invert(90%) brightness(110%);
+    -webkit-filter: grayscale(100%) invert(90%) brightness(110%);
+}
+#modmail.havemail {
+    filter: invert(90%) brightness(110%) hue-rotate(190deg);
+    -webkit-filter: invert(90%) brightness(110%) hue-rotate(190deg);
+}
+#new_modmail.nohavemail {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+}
+#new_modmail.havemail {
+    -webkit-filter: brightness(70%) hue-rotate(255deg);
+    filter: brightness(70%) hue-rotate(255deg);
+}
+/* fix for multireddit chooser margin-bug */
+body.with-listing-chooser #header .tabmenu {
+    margin-left: 0px;
+}
 
 
 /* TEXT AREAS 
@@ -253,7 +287,7 @@ input {
 }
 .md code,
 .md pre {
-    background-color: #1a1a1a;
+    background-color: #292929!important;
     border: 1px solid #F0F0F0;
 }
 .thing.stickied.link a.title {
@@ -395,9 +429,10 @@ a:hover {
     color: #ccc;
 }
 
-/* sidebar LINK color */
+/* sidebar & post comments LINK color */
 .md a {
     color: #9b9b9b;
+    border-bottom: 1px dotted #666; 
 }
 .md a:hover {
 	color: #ccc;
@@ -587,6 +622,7 @@ textarea {
     padding: 0 8px;
     margin-left: 5px;
 	border-left: 2px solid #666666;
+    background: #292929;
 }
 .md blockquote, .md del {
 	color: #999;
@@ -898,6 +934,10 @@ ul.sr-bar:nth-child(3),
 }
 .sidecontentbox {
 	margin-top: 30px;
+}
+ul.content {
+    max-width: 100% !important;
+    margin: 0;
 }
 
 /* MULTI HOVER */
