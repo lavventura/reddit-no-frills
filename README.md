@@ -1,17 +1,26 @@
-# reddit-no-frills-dark+
+# Reddit No Frills Dark+
 
-Very simple, clean dark reddit theme.
+Simple dark theme for Reddit.
 
-Dark version, includes sidebar and multireddit chooser.
+Completely revamped version of [itsamoreh/reddit-no-frills](https://github.com/itsamoreh/reddit-no-frills).
+
+Includes sidebar and multireddit chooser.
 
 Sidebar shows up on hover (icon in the top right).
 
-Add code to a usertheme or [install with stylish here](https://userstyles.org/styles/133277/reddit-no-frills-dark).
+Add code to a usertheme manually or [install with stylish here](https://userstyles.org/styles/133277/reddit-no-frills-dark).
 
-Make sure to turn subreddit styles off on reddit (settings > display > allow subreddits to show me custom themes). 
-Or edit the theme to make it only apply to your frontpage.
+Make sure to turn subreddit styles off in reddit settings:
 
-# screenshots
+settings / display / allow subreddits to show me custom themes. 
+
+Let me know if anything needs fixing.
+
+Tested on Chrome, Safari and Firefox.
+
+Not fully RES compatible.
+
+# Screenshots
 
 ![frontpage](front.gif)
 
