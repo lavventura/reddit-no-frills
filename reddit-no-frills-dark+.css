@@ -1,4 +1,5 @@
 @namespace url(http://www.w3.org/1999/xhtml);
+  
 /*
 	BY: V
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
@@ -21,7 +22,6 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(249,150,84, .8) !important;
-
 }
 ::-webkit-scrollbar-thumb {
     background: rgba(175, 175, 175, .5) !important;
@@ -35,8 +35,10 @@ body {
 }
 
 
-/* CONTENT 
-  */
+/*
+// CONTENT
+//-------------------------------
+*/
 
 .content {
     max-width: 60% !important;
@@ -44,7 +46,11 @@ body {
     padding: 5px 20px;
 }
 
-/* HEADER */
+
+/*
+// HEADER
+//-------------------------------
+*/
 .pagename { 
     font-family: monospace;
     font-size: 20px !important;
@@ -77,7 +83,7 @@ body {
     padding-left: 40px;
     margin-left: 10px;
     height: 40px;
-  	background-image: url(https://about.reddit.com/css/images/sprite.png);
+  	background-image: url(http://imgh.us/upvoted-logo.svg);
     background-position: 0 0; 
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -96,6 +102,7 @@ body {
 #sr-header-area {
     background-color: #1a1a1a;
     border-bottom: none;
+    margin-bottom: 25px;
 }
 #sr-header-area a {
     color: #999999;
@@ -182,7 +189,9 @@ body.with-listing-chooser #header .tabmenu {
 }
 
 
-/* TEXT AREAS 
+/*
+// TEXT AREAS
+//-------------------------------
 */
 input {
 	background-color: #1a1a1a!important;
@@ -201,8 +210,10 @@ input {
 }
 
 
-/* TOP INFO BOXES 
-  */
+/*
+// TOP INFO BOXES
+//-------------------------------
+*/
 /* LIVE THREAD BOX */
 .happening-now-wrap .rank-spacer,
 .happening-now-wrap .midcol-spacer {
@@ -269,7 +280,9 @@ input {
     color: #222;
 }
 
-/* FRONTPAGE LINKS & LOOKS 
+/*
+// MAIN PAGE LOOKS
+//-------------------------------
 */
 
 .midcol {
@@ -302,14 +315,15 @@ input {
 }
 .link .title {
     margin: -2px 0 0;
-	line-height: 1.33;
+	  line-height: 1.33;
 }
 .tagline {
     padding-top: 3px;
+    margin-bottom: 10px;
     font-size: 12px;
 }
-ul.flat-list.buttons {
-    padding-top: 3px;    
+.usertext-body.may-blank-within.md-container {
+    margin-top: -5px;
 }
 .link .midcol {
     margin: 15px 14px 0 5px;
@@ -332,6 +346,7 @@ a.thumbnail img {
 }
 .thumbnail.self,
 .thumbnail.default,
+.thumbnail.spoiler,
 .interstitial-image {
 	-webkit-filter: invert(90%) brightness(130%);
 	filter: invert(90%) brightness(130%);
@@ -375,7 +390,7 @@ a.thumbnail img {
 	color: #9b9b9b;
 	background: #2b2b2b;
 	padding: 5px 20px;
-    line-height: 20px;
+  line-height: 20px;
 	border: none;
 	border-radius: 0;
 	font-size: 13px;
@@ -389,8 +404,10 @@ a.thumbnail img {
     margin-top: 30px;
 }
 
-/* SUBREDDIT DROPDOWN & BY DATE DROPDOWN 
-  */
+/*
+// DROPDOWN - SUBREDDIT & BY DATE
+//-------------------------------
+*/
 .drop-choices {
     text-transform: uppercase;
 }
@@ -419,8 +436,10 @@ a.thumbnail img {
     font-size: 10px;
 }
 
-/* LINKS 
-  */
+/*
+// LINKS
+//-------------------------------
+*/
 
 a {
     color: #9b9b9b;
@@ -514,13 +533,27 @@ a:hover {
 .search-result-meta .moderator {
     color: #e5e5e5 !important;
 }
-/* COMMENT PAGE 
-  */
+
+/*
+// POST PAGE
+//-------------------------------
+*/
+
+.md p {
+    margin-bottom: 15px;
+}
+.md textarea, .md .-text, .md p, .md pre>code, .md th, .md td, .md li {
+    line-height: 1.5;
+}
+ul.flat-list.buttons {
+    margin-top: -7px;
+}
+
 button, html input[type="button"], input[type="reset"], input[type="submit"] { 
 	color: #9b9b9b;
 	background: #2b2b2b;
 	padding: 5px 20px;
-    line-height: 20px;
+  line-height: 20px;
 	border: none;
 	font-size: 13px;
 }
@@ -631,7 +664,7 @@ textarea {
 .usertext.border .usertext-body {
     background-color: #333; 
 }
-/* Comment background color */
+/* comment background color */
 .commentarea .sitetable .comment {
     background-color: #202020;
     margin-bottom: 15px;
@@ -640,8 +673,10 @@ textarea {
     margin: 10px 15px 0px;
 }
 
-/* MESSAGES 
-  */
+/*
+// MESSAGES
+//-------------------------------
+*/
 
 .menuarea {
     color: #666666;
@@ -667,7 +702,7 @@ textarea {
 	color: #9b9b9b;
 	background: #2b2b2b;
 	padding: 5px 20px;
-    line-height: 20px;
+  line-height: 20px;
 	border: none;
 	font-size: 13px;
 }
@@ -829,12 +864,16 @@ ul.sr-bar:nth-child(3),
 }
 
 
-/* SIDEBAR */
-/* visibility on hover */
+
+/*
+// SIDEBAR
+// visibility on hover
+//-------------------------------
+*/
 
 .side {
     background: #1a1a1a !important;
-	  color: #d2d2d2;
+	color: #d2d2d2;
     position: fixed !important;
     padding: 10px 20px 10px 10px !important;
     float: right !important;
@@ -852,7 +891,7 @@ ul.sr-bar:nth-child(3),
     color: #aaa;
     text-align: center !important;
     background: transparent!important;
-    height: 27px !important;
+    height: 100% !important;
     max-width: 30px !important;
     min-width: 30px !important;
     position: fixed !important;
@@ -867,8 +906,8 @@ ul.sr-bar:nth-child(3),
     font-size: 14px !important
 }
 .side:hover::before {
-    color: #888;
-    background: #2b2b2b !important;
+    color: #111;
+    /*background: #2b2b2b !important;*/
     transition: 0.5s color ease;
 }
 .side:hover {
@@ -940,7 +979,7 @@ ul.content {
     margin: 0;
 }
 
-/* MULTI HOVER */
+/* MULTIREDDIT HOVER BUBBLE */
 .hover-bubble-multi-selector label {
 	background: #202020;	
 }
@@ -975,7 +1014,7 @@ ul.content {
     background-color: inherit; 
     border: 0px;
     border-radius: 0px;
-	line-height: 11px;
+	  line-height: 11px;
 }	
 .hover-bubble.anchor-right:before, .hover-bubble.anchor-left:before, .hover-bubble.anchor-right:after, .hover-bubble.anchor-left:after {
     display:none;
@@ -1062,11 +1101,9 @@ ul.content {
 }
 
 
-/* MULTIREDDIT CHOOSER 
-*/
-
-
-/* MULTIREDDIT CHOOSER 
+/*
+// MULTIREDDIT PICKER (LEFT)
+//-------------------------------
 */
 
 body.with-listing-chooser .listing-chooser {    
@@ -1158,7 +1195,7 @@ body.with-listing-chooser .listing-chooser {
 	color: #9b9b9b;
 	background: #2b2b2b;
 	padding: 5px 20px;
-    line-height: 20px;
+  line-height: 20px;
 	border: 0px;
 	font-size: 12px;	
 	border-radius:0px;
@@ -1214,19 +1251,21 @@ body.with-listing-chooser .listing-chooser.initialized {
 	padding-left: 15px;	
 }
 
-/* SUBMIT PAGE
-  */
-   /* highlight */
+/*
+// SUBMIT PAGE
+//-------------------------------
+*/
+/* highlight */
  .formtabs-content {
     width: 520px;
     border-top: 2px solid #2b2b2b!important;
     padding-top: 10px;
 }
-/* fixes font */
+/* fix font size */
 .tabmenu.formtab .selected a {
 	font-size: 100%;
 }
-/* fixes fokken links */
+/* fix links */
 .tabmenu.formtab a {
 	border: 0px;
 }
@@ -1241,8 +1280,6 @@ body.with-listing-chooser .listing-chooser.initialized {
 	border: 1px solid #2b2b2b;
 	background-color: transparent;
 }
-
-
 .tabmenu.formtab a:hover {
 	border: 0px;
 }
@@ -1262,7 +1299,9 @@ span.error.RATELIMIT.field-ratelimit {
 }
 
 
-/* LOGIN PAGE 
+/*
+// LOGIN PAGE
+//-------------------------------
 */
 .login-page #login {
     margin-right: auto;
@@ -1273,4 +1312,52 @@ span.error.RATELIMIT.field-ratelimit {
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+/* NOT LOGGED IN
+*/
+
+.login-form-side {
+    border: none
+}
+.infobar.newsletterbar {
+	background: transparent
+}
+#eu-cookie-policy {
+    display: none;
+}
+
+/*
+// RES FIXES
+//-------------------------------
+*/
+.RES-keyNav-activeElement,
+.RES-keyNav-activeElement .md-container {
+	background-color: transparent !important;
+}
+
+.res-commentBoxes .comment {
+	border-color: transparent !important;
+}
+
+#srList {
+	background-color: #222;
+}
+
+/* These RES classes though..... */
+.res-commentBoxes .comment .comment,
+.res-commentBoxes .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: transparent !important;
+}
+
+.NERPageMarker {
+	background-color: #222;
+	border: none;
 }
