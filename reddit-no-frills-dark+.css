@@ -1,10 +1,10 @@
 @namespace url(http://www.w3.org/1999/xhtml);
-  
+
 /*
 	BY: V
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
 	WITH PIECES FROM: https://userstyles.org/styles/88599/reddit-stilig-mod	
-	
+
 */
 
 body {
@@ -291,12 +291,23 @@ input {
 .link .rank {
     display: none;
 }
-.nsfw-stamp {
+.nsfw-stamp,
+.spoiler-stamp {
     color: #000;
     font-weight: bold;
     background-color: #632222;
     border-radius: 0;
-	border: 0px;    
+	  border: 0px;    
+}
+.flair, .linkflairlabel {
+    margin: 0 .5em;
+    padding: 1px 5px;
+    background: #666;
+    color: #000;
+    font-weight: bold;
+    border-radius: 0;
+    border: 0px;
+    vertical-align: middle;
 }
 .md code,
 .md pre {
@@ -336,13 +347,16 @@ input {
 	padding: 5px 0 3px 0;
 }
 .thumbnail {
-    max-width: 64px;
-    max-height: 56px;
-    margin: 16px 16px 0 0;
+  width: 64px;
+  height: 64px;
+  margin: 16px 16px 0 0;
+  position: relative;
 }
 a.thumbnail img {
-    height: 64px;
-    width: 64px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .thumbnail.self,
 .thumbnail.default,
@@ -1312,6 +1326,10 @@ span.error.RATELIMIT.field-ratelimit {
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+.c-form-control:focus {
+    border-color: #444!important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 4px #444;
 }
 
 /* NOT LOGGED IN
