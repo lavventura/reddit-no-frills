@@ -18,6 +18,10 @@ Let me know if anything needs fixing.
 Tested on Chrome, Vivaldi, Safari and Firefox.
 
 ## Changelog
+### 25/04/2017 Update
+* Main content takes up 90% of the viewport when you browse Reddit on vertical screens
+* Fixed ["Load more comments"](https://forum.userstyles.org/discussion/55265/) being cut off
+
 ### 17/02/2017 Update
 * Image thumbnails are now displayed correctly covering the whole square without being squished
 * [flair] and [spoiler] stamp styling
@@ -28,7 +32,7 @@ Tested on Chrome, Vivaldi, Safari and Firefox.
 * Adjusted margin under paragraphs - posts and comments should be easier to read.
 
 ### 12/01/2017 Update
-* RES compatibility thanks to Andy Cormack
+* RES compatibility thanks to [Andy Cormack](https://forum.userstyles.org/discussion/53287/)
 * Message icons styling
 
 ### 14/12/2016 Update
