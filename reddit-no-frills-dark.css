@@ -40,12 +40,17 @@ body {
 //-------------------------------
 */
 
+
 .content {
     max-width: 60% !important;
     margin: 10px auto !important;
     padding: 5px 20px;
 }
-
+@media (max-width: 60rem) {
+    .content {
+	max-width: 90%!important;
+	}
+}
 
 /*
 // HEADER
@@ -559,9 +564,12 @@ a:hover {
 .md textarea, .md .-text, .md p, .md pre>code, .md th, .md td, .md li {
     line-height: 1.5;
 }
+
+/* permalink embed save give gold list */
 ul.flat-list.buttons {
     margin-top: -7px;
 }
+
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] { 
 	color: #9b9b9b;
@@ -1379,3 +1387,4 @@ span.error.RATELIMIT.field-ratelimit {
 	background-color: #222;
 	border: none;
 }
+
