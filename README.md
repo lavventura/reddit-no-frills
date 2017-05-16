@@ -18,6 +18,10 @@ Let me know if anything needs fixing.
 Tested on Chrome, Vivaldi, Safari and Firefox.
 
 ## Changelog
+### 16/05/2017 Update
+* Fixed 'continue this thread' links being cut off
+* Small changes for flair & nsfw stamps styling
+
 ### 25/04/2017 Update
 * Main content takes up 90% of the viewport when you browse Reddit on vertical screens
 * Fixed ["Load more comments"](https://forum.userstyles.org/discussion/55265/) being cut off
