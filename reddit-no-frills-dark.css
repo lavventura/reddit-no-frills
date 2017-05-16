@@ -1,7 +1,5 @@
-@namespace url(http://www.w3.org/1999/xhtml);
-
 /*
-	BY: V
+	BY: L'avventura
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
 	WITH PIECES FROM: https://userstyles.org/styles/88599/reddit-stilig-mod	
 
@@ -297,22 +295,21 @@ input {
     display: none;
 }
 .nsfw-stamp,
-.spoiler-stamp {
-    color: #000;
+.nsfw-stamp, .spoiler-stamp {
+    color: #963c3c;
     font-weight: bold;
-    background-color: #632222;
+    border: 1px solid #963c3c;
     border-radius: 0;
-	  border: 0px;    
 }
 .flair, .linkflairlabel {
-    margin: 0 .5em;
-    padding: 1px 5px;
-    background: #666;
-    color: #000;
-    font-weight: bold;
-    border-radius: 0;
-    border: 0px;
-    vertical-align: middle;
+  margin: 0 .5em;
+  padding: 1px 5px;
+  border: 1px solid #555;
+  background: transparent;
+  color: #888;
+  font-weight: bold;
+  border-radius: 0;
+  vertical-align: middle;
 }
 .md code,
 .md pre {
@@ -615,6 +612,14 @@ a[href$="/spoiler"]:hover {
 .comment .expand {
     color: #222222;
 	background: #202020;
+}
+.morecomments {
+    display: inline-block;
+    height: 20px;
+}
+.deepthread {
+    display: inline-block;
+    height: 20px;
 }
 .tagline .stickied-tagline,
 .search-result-meta .stickied-tagline {
@@ -1387,4 +1392,3 @@ span.error.RATELIMIT.field-ratelimit {
 	background-color: #222;
 	border: none;
 }
-
