@@ -18,6 +18,9 @@ Let me know if anything needs fixing.
 Tested on Chrome, Vivaldi, Safari and Firefox.
 
 ## Changelog
+### 03/07/2017 Update
+* Adjusted colors for links and visited links
+
 ### 16/05/2017 Update
 * Fixed 'continue this thread' links being cut off
 * Small changes for flair & nsfw stamps styling
