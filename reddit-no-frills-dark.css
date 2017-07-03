@@ -5,6 +5,7 @@
 
 */
 
+
 body {
     background-color: #1a1a1a !important;
     color: #d2d2d2 !important;
@@ -458,16 +459,20 @@ a.thumbnail img {
 */
 
 a {
-    color: #9b9b9b;
+    color: #f1f1f1;
 }
 a:hover {
     color: #ccc;
 }
+[class*="md"] a:visited {
+	color:#555 !important;
+	border-bottom: 1px dotted #666;	
+}
 
 /* sidebar & post comments LINK color */
 .md a {
-    color: #9b9b9b;
-    border-bottom: 1px dotted #666; 
+    color: #f1f1f1;
+    border-bottom: 1px dotted #ddd; 
 }
 .md a:hover {
 	color: #ccc;
