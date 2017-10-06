@@ -1,5 +1,5 @@
 /*
-	BY: Lavventura
+	BY: @melangue
 	BASED ON WORK BY: Amor Kumar - https://userstyles.org/styles/126393/reddit-no-frills
 	WITH PIECES FROM: https://userstyles.org/styles/88599/reddit-stilig-mod	
 
@@ -83,15 +83,15 @@ body {
 }
 #header-img.default-header,
 #header-img {
-    width: 0;
-    padding-left: 40px;
-    margin-left: 10px;
-    height: 40px;
-  	background-image: url(http://imgh.us/upvoted-logo.svg);
-    background-position: 0 0; 
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-	transition: 0.5s filter;
+  width: 0;
+  padding-left: 40px;
+  margin-left: 10px;
+  height: 40px;
+  background-image: url(http://redditblog.com/wp-content/themes/vip/reddit-blog/assets/css/../../images/sprite.svg);
+  background-position: -480px -56px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: 0.5s filter;
 }
 #header-img.default-header {
     margin-top: 20px;
