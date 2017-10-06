@@ -18,6 +18,9 @@ Let me know if anything needs fixing.
 Tested on Chrome, Vivaldi, Safari and Firefox.
 
 ## Changelog
+### 06/10/2017 Update
+* Reddit logo is back
+
 ### 03/07/2017 Update
 * Adjusted colors for links and visited links
 
